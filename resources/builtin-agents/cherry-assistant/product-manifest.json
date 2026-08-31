@@ -448,7 +448,7 @@
     }
   ],
   "providers": {
-    "version": "481ed6bc0a05fe60",
+    "version": "72eb4a4148a2cb3a",
     "count": 62,
     "entries": [
       {
@@ -509,7 +509,7 @@
       },
       {
         "id": "dashscope",
-        "name": "Bailian"
+        "name": "Qwen AI Platform"
       },
       {
         "id": "deepseek",
