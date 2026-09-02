@@ -38721,11 +38721,11 @@
               {
                 "default": "high",
                 "kind": "effort",
-                "values": ["none", "high", "max"]
+                "values": ["low", "medium", "high", "xhigh", "max"]
               }
             ],
             "defaultEffort": "high",
-            "supportedEfforts": ["none", "high", "max"]
+            "supportedEfforts": ["low", "medium", "high", "xhigh", "max"]
           },
           "wire": {
             "effort": {
@@ -38750,6 +38750,55 @@
               ]
             }
           }
+        },
+        "openai-responses": {
+          "support": {
+            "controls": [
+              {
+                "default": "xhigh",
+                "kind": "effort",
+                "values": ["none", "minimal", "low", "medium", "high", "xhigh", "max"]
+              }
+            ],
+            "defaultEffort": "xhigh",
+            "supportedEfforts": ["none", "minimal", "low", "medium", "high", "xhigh", "max"]
+          },
+          "wire": {
+            "auto": {
+              "effortMap": {
+                "auto": "xhigh"
+              },
+              "operations": [
+                {
+                  "target": "reasoningEffort",
+                  "value": {
+                    "source": "effort"
+                  }
+                }
+              ]
+            },
+            "effort": {
+              "operations": [
+                {
+                  "target": "reasoningEffort",
+                  "value": {
+                    "source": "effort"
+                  }
+                }
+              ]
+            },
+            "off": {
+              "operations": [
+                {
+                  "target": "reasoningEffort",
+                  "value": {
+                    "source": "literal",
+                    "value": "none"
+                  }
+                }
+              ]
+            }
+          }
         }
       }
     },
@@ -38764,11 +38813,11 @@
               {
                 "default": "high",
                 "kind": "effort",
-                "values": ["none", "high", "max"]
+                "values": ["low", "medium", "high", "xhigh", "max"]
               }
             ],
             "defaultEffort": "high",
-            "supportedEfforts": ["none", "high", "max"]
+            "supportedEfforts": ["low", "medium", "high", "xhigh", "max"]
           },
           "wire": {
             "effort": {
@@ -38788,6 +38837,55 @@
                   "value": {
                     "source": "literal",
                     "value": false
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "openai-responses": {
+          "support": {
+            "controls": [
+              {
+                "default": "xhigh",
+                "kind": "effort",
+                "values": ["none", "minimal", "low", "medium", "high", "xhigh", "max"]
+              }
+            ],
+            "defaultEffort": "xhigh",
+            "supportedEfforts": ["none", "minimal", "low", "medium", "high", "xhigh", "max"]
+          },
+          "wire": {
+            "auto": {
+              "effortMap": {
+                "auto": "xhigh"
+              },
+              "operations": [
+                {
+                  "target": "reasoningEffort",
+                  "value": {
+                    "source": "effort"
+                  }
+                }
+              ]
+            },
+            "effort": {
+              "operations": [
+                {
+                  "target": "reasoningEffort",
+                  "value": {
+                    "source": "effort"
+                  }
+                }
+              ]
+            },
+            "off": {
+              "operations": [
+                {
+                  "target": "reasoningEffort",
+                  "value": {
+                    "source": "literal",
+                    "value": "none"
                   }
                 }
               ]
@@ -38852,13 +38950,11 @@
           "support": {
             "controls": [
               {
-                "default": "high",
                 "kind": "effort",
-                "values": ["none", "high", "max"]
+                "values": ["none", "minimal", "low", "medium", "high", "xhigh"]
               }
             ],
-            "defaultEffort": "high",
-            "supportedEfforts": ["none", "high", "max"]
+            "supportedEfforts": ["none", "minimal", "low", "medium", "high", "xhigh"]
           },
           "wire": {
             "effort": {
@@ -38896,13 +38992,11 @@
           "support": {
             "controls": [
               {
-                "default": "high",
                 "kind": "effort",
-                "values": ["none", "high", "max"]
+                "values": ["none", "minimal", "low", "medium", "high", "xhigh", "max"]
               }
             ],
-            "defaultEffort": "high",
-            "supportedEfforts": ["none", "high", "max"]
+            "supportedEfforts": ["none", "minimal", "low", "medium", "high", "xhigh", "max"]
           },
           "wire": {
             "effort": {
@@ -38922,6 +39016,55 @@
                   "value": {
                     "source": "literal",
                     "value": false
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "openai-responses": {
+          "support": {
+            "controls": [
+              {
+                "default": "xhigh",
+                "kind": "effort",
+                "values": ["none", "minimal", "low", "medium", "high", "xhigh", "max"]
+              }
+            ],
+            "defaultEffort": "xhigh",
+            "supportedEfforts": ["none", "minimal", "low", "medium", "high", "xhigh", "max"]
+          },
+          "wire": {
+            "auto": {
+              "effortMap": {
+                "auto": "xhigh"
+              },
+              "operations": [
+                {
+                  "target": "reasoningEffort",
+                  "value": {
+                    "source": "effort"
+                  }
+                }
+              ]
+            },
+            "effort": {
+              "operations": [
+                {
+                  "target": "reasoningEffort",
+                  "value": {
+                    "source": "effort"
+                  }
+                }
+              ]
+            },
+            "off": {
+              "operations": [
+                {
+                  "target": "reasoningEffort",
+                  "value": {
+                    "source": "literal",
+                    "value": "none"
                   }
                 }
               ]
@@ -39121,7 +39264,6 @@
                 "type": "text"
               },
               "size": {
-                "default": "2048x2048",
                 "options": ["2048x2048", "1664x928", "1472x1140", "1328x1328", "1140x1472", "928x1664"],
                 "render": "chips",
                 "type": "enum"
@@ -39207,7 +39349,6 @@
                 "type": "text"
               },
               "size": {
-                "default": "2048x2048",
                 "options": ["2048x2048", "1664x928", "1472x1140", "1328x1328", "1140x1472", "928x1664"],
                 "render": "chips",
                 "type": "enum"
@@ -40698,5 +40839,5 @@
       "providerId": "qwencloud"
     }
   ],
-  "version": "231396f2528f7199"
+  "version": "a709c5be39785c27"
 }
