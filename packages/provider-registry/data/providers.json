@@ -2161,6 +2161,7 @@
       "name": "Qiniu"
     },
     {
+      "availableInEditions": ["global"],
       "defaultChatEndpoint": "openai-chat-completions",
       "description": "QwenCloud - AI model provider",
       "endpointConfigs": {
@@ -2529,5 +2530,5 @@
       ]
     }
   ],
-  "version": "d6b38a9195588196"
+  "version": "481ed6bc0a05fe60"
 }
