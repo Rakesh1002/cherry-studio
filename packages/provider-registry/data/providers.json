@@ -494,7 +494,7 @@
     {
       "availableInEditions": ["global", "cn"],
       "defaultChatEndpoint": "openai-chat-completions",
-      "description": "Bailian - AI model provider",
+      "description": "Qwen AI Platform - AI model provider",
       "endpointConfigs": {
         "anthropic-messages": {
           "adapterFamily": "anthropic",
@@ -2530,5 +2530,5 @@
       ]
     }
   ],
-  "version": "72eb4a4148a2cb3a"
+  "version": "81458fdff4a856ca"
 }
